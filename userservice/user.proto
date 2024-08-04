@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package service2pb;
+
+// Specify the Go package import path.
+option go_package = "/service2pb";
+
+service Service2 {
+  rpc SayHi (HiRequest) returns (HiResponse);
+}
+
+message HiRequest {
+  string name = 1;
+}
+
+message HiResponse {
+  string message = 1;
+}
